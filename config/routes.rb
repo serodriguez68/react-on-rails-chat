@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'visitors/home'
+
   devise_for :users
 
   devise_scope :user do
@@ -8,6 +10,7 @@ Rails.application.routes.draw do
 
     unauthenticated do
       root 'devise/sessions#new', as: :unauthenticated_root
+      # root 'visitors#home', as: :unauthenticated_root
     end
   end
 end
