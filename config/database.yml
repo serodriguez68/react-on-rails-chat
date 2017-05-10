@@ -1,25 +1,23 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
+  encoding: unicode
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: react_redux_action_cable_chat_dev
+  username: react_redus_action_cable_chat_dev
+  password:
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: react_redux_action_cable_chat_test
+  username: react_redux_action_cable_chat_test
+  password:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: react_redux_action_cable_chat_prod
+  username: react_redux_action_cable_chat_prod
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
