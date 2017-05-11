@@ -8,7 +8,10 @@ class MessagesController < ApplicationController
   def create
     @message = current_user.messages.build(message_params)
     if @message.save
-      render 'create'
+      ActionCable.server.broadcast(
+        'general_chat_room',
+        rendered_message: render(partial: 'messages/message', locals: { message: @message })
+      )
     end
   end
 
