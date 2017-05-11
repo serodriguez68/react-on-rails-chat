@@ -35,6 +35,7 @@ gem 'devise', git: 'https://github.com/plataformatec/devise.git', branch: 'maste
 
 gem 'slim-rails'
 gem 'foundation-rails'
+gem 'webpacker', github: 'rails/webpacker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

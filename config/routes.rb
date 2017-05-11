@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
+  get 'messages/chat_room'
+
   get 'visitors/home'
 
   devise_for :users
 
   devise_scope :user do
     authenticated :user do
-      root 'home#index', as: :authenticated_root
+      root 'messages#chat_room', as: :authenticated_root
     end
 
     unauthenticated do
@@ -13,4 +15,6 @@ Rails.application.routes.draw do
       # root 'visitors#home', as: :unauthenticated_root
     end
   end
+
+  resources :messages, only: [:chat_room, :create]
 end

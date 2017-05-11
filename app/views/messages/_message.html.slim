@@ -1,0 +1,6 @@
+.row
+  .columns
+    strong = "#{message.user.email}:"
+    div = message.content
+    div = I18n.l message.created_at, format: :long
+br/

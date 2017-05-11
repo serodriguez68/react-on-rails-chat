@@ -13,4 +13,6 @@ html
     - flash.each do |key, value|
       div class=("#{key} callout")
         = value
-    = yield
+    div.row
+      div.column
+        = yield
