@@ -1,11 +1,17 @@
 {
   "presets": [
-    ["env", {
-      "modules": false,
-      "targets": {
-        "node": "current"
-      },
-      "useBuiltIns": true
-    }]
+    [
+      "env",
+      {
+        "modules": false,
+        "targets": {
+          "node": "current"
+        },
+        "useBuiltIns": true
+      }
+    ],
+    "react",
+    "es2015",
+    "stage-1"
   ]
 }

@@ -1,0 +1,4 @@
+const ACTIONCABLE_PATH = "ws://localhost:3000/cable ";
+
+ActionCable = require('actioncable');
+export const Cable = ActionCable.createConsumer(ACTIONCABLE_PATH);

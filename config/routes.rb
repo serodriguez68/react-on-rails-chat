@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated :user do
-      root 'messages#chat_room', as: :authenticated_root
+      root 'messages#react_chat_room', as: :authenticated_root
     end
 
     unauthenticated do
@@ -16,5 +16,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :messages, only: [:chat_room, :create]
+  resources :messages, only: [:create] do
+    collection do
+      get :chat_room
+      get :react_chat_room
+      get :api_index
+    end
+  end
 end
