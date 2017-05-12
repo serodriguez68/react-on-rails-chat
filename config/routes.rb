@@ -19,4 +19,6 @@ Rails.application.routes.draw do
       get :api_index
     end
   end
+
+  mount ActionCable.server, at: '/cable'
 end
