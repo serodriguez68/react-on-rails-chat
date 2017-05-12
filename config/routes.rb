@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'messages/chat_room'
-
-  get 'visitors/home'
 
   devise_for :users
 
@@ -12,7 +9,6 @@ Rails.application.routes.draw do
 
     unauthenticated do
       root 'devise/sessions#new', as: :unauthenticated_root
-      # root 'visitors#home', as: :unauthenticated_root
     end
   end
 
