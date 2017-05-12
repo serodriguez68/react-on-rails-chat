@@ -7,7 +7,6 @@ export default function ( state={}, action ) {
       return _.mapKeys(action.payload.data, 'id');
 
     case ADD_MESSAGE:
-      console.log(action);
       return { ...state, [action.payload.message.id]: action.payload.message };
 
     default:

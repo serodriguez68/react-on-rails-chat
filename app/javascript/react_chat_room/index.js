@@ -20,5 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
     <Provider store={store}>
       <MessageBox />
     </Provider>
-    , document.querySelector('#message-box'));
+    , document.querySelector('#react_chat_room'));
 })

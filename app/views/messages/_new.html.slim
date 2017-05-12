@@ -1,9 +1,6 @@
 = form_with model: @message, remote: true do |f|
-  .row
-    .columns.small-10
-      = f.text_area :content
-    .columns.small-2
-      = f.submit 'Send', class: 'button expanded success'
+    = f.text_area :content, id: 'message_content'
+    = f.submit 'Send', class: 'hide'
 
 
 
