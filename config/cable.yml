@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url: redis://redistogo:cbcee8508fffefb8bed1c0e30669eb5c@chubb.redistogo.com:9818/
   channel_prefix: react-redux-action-cable-chat_production

@@ -1,4 +1,4 @@
 import ActionCable from 'actioncable';
-const ACTIONCABLE_PATH = "ws://localhost:3000/cable ";
+const ACTIONCABLE_PATH = '<%= Rails.application.config.action_cable.mount_path %>';
 
 export const Cable = ActionCable.createConsumer(ACTIONCABLE_PATH);
