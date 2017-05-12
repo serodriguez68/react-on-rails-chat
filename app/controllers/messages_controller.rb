@@ -18,6 +18,7 @@ class MessagesController < ApplicationController
         'general_chat_room',
         message: @message.as_json.merge({user: {email: @message.user.email}})
       )
+      head :ok
     end
   end
   # Rails + Action Cable + React ==============================================
