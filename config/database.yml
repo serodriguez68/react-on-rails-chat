@@ -6,18 +6,18 @@ default: &default
 
 development:
   <<: *default
-  database: react_redux_action_cable_chat_dev
-  username: react_redux_action_cable_chat
+  database: react_on_rails_chat_dev
+  username: react_on_rails_chat
   password:
 
 test:
   <<: *default
-  database: react_redux_action_cable_chat_test
-  username: react_redux_action_cable_chat
+  database: react_on_rails_chat_test
+  username: react_on_rails_chat
   password:
 
 production:
   <<: *default
-  database: react_redux_action_cable_chat_prod
-  username: react_redux_action_cable_chat_prod
+  database: react_on_rails_chat_prod
+  username: react_on_rails_chat_prod
   password: <%= Rails.application.secrets.production_database_password %>

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'hello_world', to: 'hello_world#index'
   devise_for :users
 
   devise_scope :user do
@@ -15,7 +14,6 @@ Rails.application.routes.draw do
 
   resources :messages, only: [:create] do
     collection do
-      get :chat_room
       get :react_chat_room
       get :api_index
     end

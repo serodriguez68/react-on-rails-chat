@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://redistogo:cbcee8508fffefb8bed1c0e30669eb5c@chubb.redistogo.com:9818/
-  channel_prefix: react-redux-action-cable-chat_production
+  url:
+  channel_prefix:

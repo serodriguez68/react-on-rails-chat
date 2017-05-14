@@ -1,4 +1,4 @@
 div#react_chat_room
-  = javascript_pack_tag 'react_chat_room'
+  = react_component("HelloWorldApp", props: @hello_world_props, prerender: false)
 
 = render 'new', message: @message
