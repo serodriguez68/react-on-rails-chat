@@ -1,9 +1,12 @@
 class MessagesController < ApplicationController
+  include ReactOnRails::Controller
 
   # Rails + Action Cable + React
   # ===========================================================================
   def react_chat_room
     @message = current_user.messages.build
+    messages = Message.all.includes(:user)
+    @messages_props = messages.map{ |m| [m.id, m.as_json.merge({user: {email: m.user.email}})]  }.to_h
   end
 
   def api_index

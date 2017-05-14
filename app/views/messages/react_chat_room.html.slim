@@ -1,4 +1,4 @@
 div#react_chat_room
-  = react_component("HelloWorldApp", props: @hello_world_props, prerender: false)
-
+  = redux_store('messagesStore', props: @messages_props)
+  = react_component("ChatApp", prerender: false)
 = render 'new', message: @message
