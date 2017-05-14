@@ -37,9 +37,12 @@ gem 'devise', git: 'https://github.com/plataformatec/devise.git', branch: 'maste
 
 gem 'slim-rails'
 gem 'foundation-rails'
-gem 'webpacker', github: 'rails/webpacker'
+# gem 'webpacker', github: 'rails/webpacker'
 
 gem 'redis'
+
+gem "react_on_rails", "~> 7"
+gem 'foreman'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
