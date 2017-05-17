@@ -6,6 +6,12 @@ import { fetchMessages, addMessage } from '../actions/index';
 
 
 class MessageBox extends Component {
+
+  constructor() {
+    super();
+    this.cable = null;
+  }
+
   componentDidMount(){
     this.props.fetchMessages();
     this.subscribeChannel();
@@ -13,6 +19,10 @@ class MessageBox extends Component {
 
   componentDidUpdate(){
     this.scroll_to_bottom();
+  }
+
+  componentWillUnmount() {
+    this.cable.subscriptions.remove({ channel: 'ChatChannel' });
   }
 
   subscribeChannel() {
