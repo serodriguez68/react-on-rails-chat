@@ -6,5 +6,4 @@ test:
 
 production:
   adapter: redis
-  url:
-  channel_prefix:
+  url: redis://redistogo:930c1985ca13fdb27a3d64ff6816a032@greeneye.redistogo.com:10650/
