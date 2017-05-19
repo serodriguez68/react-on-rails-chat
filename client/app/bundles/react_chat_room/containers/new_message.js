@@ -31,15 +31,17 @@ class NewMessage extends Component {
     this.props.createMessage(values, () => {
       this.props.reset();
     });
-    // this.props.resetForm();
   }
 
   onKeyDown(event){
+
     const hitEnter = parseInt(event.keyCode) === 13;
+
     if ( hitEnter && !event.shiftKey) {
-      console.log('WIP');
-      // $('#NewMessageFormSubmit').click();
-      // this.onSubmit(this.props.values);
+      event.preventDefault();
+      const { handleSubmit } = this.props;
+      // Builds the function and then invokes it
+      handleSubmit(this.onSubmit.bind(this))();
     }
 
   }
@@ -60,7 +62,6 @@ class NewMessage extends Component {
           onKeyDown={this.onKeyDown.bind(this)}
           component={this.renderTextArea}
         />
-        <input id="NewMessageFormSubmit" type="submit" className='success button expanded'/>
       </form>
     );
   }
