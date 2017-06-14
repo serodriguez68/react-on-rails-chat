@@ -49,7 +49,7 @@ class MessageBox extends Component {
     return _.map(this.props.messages, message => {
       return(
         <div key={message.id} id={`message-${message.id}`}>
-          <strong>{message.user.email}</strong>
+          <strong>{message.user.email}: </strong>
           <div>{message.content}</div>
           <div><small>{message.created_at}</small></div>
           <br/>
