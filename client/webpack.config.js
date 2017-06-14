@@ -40,7 +40,7 @@ const config = {
 
   plugins: [
     new webpack.EnvironmentPlugin({
-      NODE_ENV: 'development', // use 'development' unless process.env.NODE_ENV is defined
+      NODE_ENV: process.env.NODE_ENV || 'development', // use 'development' unless process.env.NODE_ENV is defined
       DEBUG: false,
     }),
     new ManifestPlugin({ fileName: manifest, writeToFileEmit: true }),
@@ -75,3 +75,6 @@ if (devBuild) {
 } else {
   console.log('Webpack production build for Rails'); // eslint-disable-line no-console
 }
+
+console.log('-----------------');
+console.log(process.env.NODE_ENV || 'development');
