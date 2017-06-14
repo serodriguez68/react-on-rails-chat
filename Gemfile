@@ -42,7 +42,7 @@ gem 'foundation-rails'
 
 gem 'redis'
 
-gem "react_on_rails", "~> 7"
+gem "react_on_rails", "8.0.0"
 gem 'foreman'
 
 group :development, :test do
