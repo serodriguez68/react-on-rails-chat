@@ -45,9 +45,7 @@ const config = {
     }),
     new ManifestPlugin({ fileName: manifest, writeToFileEmit: true }),
 
-  ].concat(
-    process.env.NODE_ENV === 'production' ? [ new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } }) ] : []
-  ),
+  ],
 
   module: {
     rules: [
