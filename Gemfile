@@ -43,7 +43,7 @@ gem 'foundation-rails'
 gem 'redis'
 
 gem "react_on_rails", "8.0.0"
-gem "webpacker_lite", "2.0.4"
+gem 'webpacker_lite'
 gem 'foreman'
 
 group :development, :test do
@@ -69,3 +69,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'mini_racer', platforms: :ruby
+
+gem 'mini_racer', platforms: :ruby
+

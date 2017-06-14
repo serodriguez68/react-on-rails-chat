@@ -262,7 +262,7 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
-  webpacker_lite (= 2.0.4)
+  webpacker_lite
 
 RUBY VERSION
    ruby 2.4.1p111
