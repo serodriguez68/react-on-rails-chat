@@ -42,7 +42,7 @@ gem 'foundation-rails'
 
 gem 'redis'
 
-gem "react_on_rails", "8.0.0"
+gem "react_on_rails", "8.0.3"
 gem 'webpacker_lite'
 gem 'foreman'
 
